@@ -1,0 +1,156 @@
+# packages.txt
+#
+# List of packages I want to have installed on my workstation
+# and/or (virtual dedicated) servers.
+
+# common packages
+sudo vim emacs zsh screen tmux
+colordiff monkeytail rdiff pwgen attr wipe lsof rlwrap
+rsync rdiff-backup rsnapshot
+openssh-client keychain
+curl wget links jigdo-file
+iotop iftop mc
+perl sqlite3 rrdtool sng
+subnetcalc wcalc
+xz-utils xz-lzma p7zip unrar-free pigz lzop zip unzip bzip2 arj
+
+exim4
+rcs cvs subversion subversion-tools git-core git-svn git-doc mercurial mercurial-git fossil
+sshfs fusedav davfs2 fuseext2 fusefat fuseiso fuseiso9660 fuse-utils
+tcpdump nmap traceroute tcptraceroute
+
+apt-listchanges apt-listbugs apt-file
+gcc gcc-doc g++ perl-doc perl-doc-html
+dpkg-dev debhelper devscripts
+
+parted mdadm lvm2 btrfs-tools cryptsetup
+
+# virtualization 
+kvm qemu dosbox bximage
+libvirt-bin virtinst virt-top bridge-utils
+
+# old-style multiarch
+ia32-libs ia32-libs-gtk ia32-libs-dev gcc-multilib
+
+# networking
+dyndns openvpn ppp pptp-linux
+bluetooth bluez bluez-hcidump bluez-firmware
+usb-modeswitch wpasupplicant obex-data-server obexd-client
+samba smbclient smbnetfs smbfs fusesmb
+
+# custom non-free
+libqt4-core libqt4-gui
+skype
+opera
+
+# hardware
+lm-sensors smartmontools
+firmware-linux firmware-linux-free firmware-linux-nonfree
+
+# java
+#sun-java6-jre sun-java6-jdk sun-java6-source sun-java6-demo sun-java6-javadb
+#sun-java6-plugin sun-java6-fonts
+java-package
+oracle-j2sdk1.6 oracle-j2sdk1.6-doc oracle-j2sdk1.7 oracle-j2sdk1.7-doc
+openjdk-6-jdk openjdk-6-source openjdk-6-doc
+default-jre default-jdk
+ant maven2 junit
+
+# desktop
+gparted synaptic software-center wireshark virt-manager
+libnotify-bin
+xfsprogs reiserfsprogs reiser4progs jfsutils ntfsprogs dosfstools mtools yelp kpartx dmraid dmsetup
+qgit
+audacious vlc mplayer smplayer ffmpeg gnome-codec-install gstreamer0.10-plugins-ugly gstreamer0.10-plugins-bad gstreamer0.10-ffmpeg
+openoffice.org gnucash
+gimp gimp-help-en gimp-data-extras 
+wine wine-utils wine-doc lib32nss-mdns
+transmission transmission-gtk transmission-qt linuxdcpp
+kmail kopete kate kolourpaint4 komparator kdiff3 kompare
+pidgin pidgin-audacious pidgin-encryption pidgin-extprefs pidgin-latex pidgin-microblog pidgin-openpgp pidgin-otr pidgin-plugin-pack pidgin-skype pidgin-themes pidgin-twitter texlive-base dvipng
+ssh-askpass-gnome sensors-applet
+kde-standard gnome-desktop-environment gnome-accessibility gnome-games
+#teatime
+
+# desktop optional
+w3-recs
+network-manager-openvpn-gnome network-manager-vpnc-gnome network-manager-pptp-gnome
+wireless-tools wicd wpasupplicant ifscheme guessnet ppp pppoe ifplugd bridge-utils
+
+# NVIDIA
+nvidia-glx nvidia-kernel-dkms
+
+# ATI
+xserver-xorg-video-ati radeontool fglrx-driver fglrx-control xvba-va-driver amd-opencl-icd
+
+# "server"
+# sudo update-rc.d nginx start 21 2 3 4 5 . stop 0 1 6 .
+apache2-mpm-prefork apache2 libapache2-svn
+nginx
+munin munin-node munin-libvirt-plugins libdbi-perl
+bind9 ntp ntpdate
+awstats libgeo-ipfree-perl libgeo-ip-perl geoip-bin geoip-database 
+
+mysql-client postgresql-client
+
+libapache2-mod-authn-sasl libsasl2-modules
+libcache-cache-perl libapache2-mod-wsgi libcgi-fast-perl libapache2-mod-fastcgi
+trac trac-email2trac trac-git trac-graphviz trac-mastertickets trac-wikirename trac-wikitablemacro trac-wysiwyg trac-xmlrpc
+locales-all 
+
+# для maximal'а:
+php5 libapache2-mod-php5
+libapache2-mod-passenger ruby rails libmysql-ruby
+rmagick librmagick-ruby imagemagick
+mysql-server mysql-client php5-mysql
+
+# просто так:
+hugs haskell-doc
+ghc6 ghc6-doc libghc6-cgi-dev libghc6-cgi-doc libghc6-fastcgi-dev libghc6-fastcgi-doc
+
+###### OpenWRT
+# http://192.168.26.70/~djdfy/downloads.openwrt.org/backfire/10.03.1-rc6/ar71xx/packages
+luci
+px5g uhttpd-mod-tls
+ndyndns 
+igmpproxy
+tcpdump ip
+luci-app-upnp miniupnpd
+
+
+kmod-ath9k hostapd-mini
+kmod-usb-core kmod-usb-storage kmod-usb-storage-extras kmod-usb-ohci
+
+kmod-usb-uhci
+
+###### /etc/apt/sources.list examples
+
+### DEBIAN
+
+# USING LOCAL CACHE
+# deb http://deb/debian squeeze main contrib non-free
+# deb http://deb/debian-security squeeze/updates main contrib non-free
+# deb http://deb/debian squeeze-updates main contrib non-free
+# deb http://deb/debian-backports squeeze-backports main contrib non-free
+# deb http://deb/debian wheezy main contrib non-free
+# deb http://deb/debian sid main contrib non-free
+# deb http://deb/opera squeeze non-free
+
+### UBUNTU DESKTOP INSTALL
+
+# USING LOCAL CACHE
+#deb http://deb/ubuntu precise main restricted universe multiverse
+#deb http://deb/ubuntu precise-updates main restricted universe multiverse
+#deb http://deb/ubuntu precise-backports main restricted universe multiverse
+#deb http://deb/ubuntu precise-security main restricted universe multiverse
+#deb http://deb/ubuntu-security precise-security main restricted universe multiverse
+#deb http://deb/ubuntu-canonical precise partner
+#deb http://deb/opera stable non-free
+#deb [arch=i386] http://deb/skype stable non-free
+
+# USING INTERNET MIRRORS
+# deb http://ru.archive.ubuntu.com/ubuntu precise main restricted universe multiverse
+# deb http://ru.archive.ubuntu.com/ubuntu precise-updates main restricted universe multiverse
+# deb http://ru.archive.ubuntu.com/ubuntu precise-backports main restricted universe multiverse
+# deb http://security.ubuntu.com/ubuntu precise-security main restricted
+# deb http://archive.canonical.com/ubuntu precise partner
